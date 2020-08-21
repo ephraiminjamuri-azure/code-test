@@ -1,0 +1,126 @@
+<h2 style="padding-top:10px;">{{title}}/<span style="color:orangered">Employee</span></h2>
+<hr />
+
+<div class="ui-g-12">
+  <p-messages [(value)]="msgs"></p-messages>
+</div>
+
+<form [formGroup]="employeeForm" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Name</label>
+    <div class="col-md-6">
+      <!--Input Control -- Textbox -->
+      <input type="text" pInputText name="name" class="NormalPrint" size="45" formControlName="name" />
+    </div>
+    <!--Styling for Required Field-->
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Address</label>
+    <div class="col-md-6">
+      <!--Input Control -- Textbox -->
+      <input type="text" pInputText name="address" class="NormalPrint" size="45" formControlName="address" />
+    </div>
+    <!--Styling for Required Field-->
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Role</label>
+    <div class="col-md-6">
+      <!--Input Control -- Textbox -->
+      <input type="text" pInputText name="role" class="NormalPrint" size="45" formControlName="role" />
+    </div>
+    <!--Styling for Required Field-->
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Department</label>
+    <div class="col-md-6">
+      <!--Input Control -- Textbox -->
+      <input type="text" pInputText name="department" class="NormalPrint" size="45" formControlName="department" />
+    </div>
+    <!--Styling for Required Field-->
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Skill Sets</label>
+    <div class="col-md-6">
+      <!--Input Control -- Textbox -->
+      <input type="text" pInputText name="skillSets" class="NormalPrint" size="45" formControlName="skillSets" />
+    </div>
+    <!--Styling for Required Field-->
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Date of Birth</label>
+    <div class="col-md-6">
+      <!-- Date Control -->
+      <p-calendar [showIcon]="true" name="date_of_Birth" formControlName="date_of_Birth" title="Choose a date" [monthNavigator]="true" [yearNavigator]="true" yearRange="1950:2050" showButtonBar="true"></p-calendar>
+    </div>
+    <!--Styling for Required Field-->
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class=" control-label col-md-12">Date of Joining</label>
+    <div class="col-md-6">
+      <!-- Date Control -->
+      <p-calendar [showIcon]="true" name="date_of_Joining" formControlName="date_of_Joining" title="Choose a date" [monthNavigator]="true" [yearNavigator]="true" yearRange="1950:2050" showButtonBar="true"></p-calendar>
+    </div>
+    <!--Styling for Required Field-->
+
+  </div>
+
+
+  <div class="form-group row">
+    <label class=" control-label col-sm-2">Is Active</label>
+    <div class="col-sm-3">
+
+      <!-- Checkbox Control -->
+      
+      <p-checkbox name="isActive" [binary]="true" formControlName="isActive"></p-checkbox>
+      &nbsp;
+    </div>
+    <!--Styling for Required Field-->
+
+  </div>
+
+
+  <div class="form-group" style="padding-top:35px;">
+    <button pButton type="submit" label="Save" class="ui-button-raised ui-button-success" style="width:100px"></button>&nbsp;
+    <button pButton type="button" label="Cancel" class="ui-button-raised" style="width:100px" (click)="cancel()"></button>
+  </div>
+  <!--
+  <div style="height: 100%; margin: 5px; padding: 10px;padding-top:20px;" class="Div100" class="form-group">
+
+    <span class="Div10">
+      <button type="button" pButton label="Save & Close" (click)="save('Close')" class="ui-button-success"></button>
+    </span>
+    <span class="Div10">
+      <button type="button" pButton label="Save & Continue" (click)="save('Continue')" class="ui-button-info"></button>
+    </span>
+    <span class="Div10" style="padding-left: 20px;">
+      <button type="button" pButton label="Close" (click)="cancel()" class="ui-button-danger"></button>
+    </span>
+    <div class="ui-g-12">
+      <p-messages [(value)]="messages"></p-messages>
+    </div>
+
+    <div class="ui-g-12">
+      <p-messages [(value)]="messages"></p-messages>
+    </div>
+  </div>
+  -->
+</form>
